@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-         List<Produto> list = new ArrayList<>();
+        List<Produto> list = new ArrayList<>();
 
         list.add(new Produto("TV", 900.00));
         list.add(new Produto("Gabinete", 200.00));
@@ -20,6 +20,29 @@ public class Main {
         };
 
         list.sort(comp);
+
+        for (Produto p : list) {
+            System.out.println(p);
+        }
+
+
+
+
+
+        Comparator<Produto> comp2 = (p1, p2) -> {
+            return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+        };
+
+        list.sort(comp2);
+
+        for (Produto p : list) {
+            System.out.println(p);
+        }
+
+
+
+
+        list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
         for (Produto p : list) {
             System.out.println(p);
