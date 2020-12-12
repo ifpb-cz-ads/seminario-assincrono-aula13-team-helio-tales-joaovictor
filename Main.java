@@ -47,6 +47,22 @@ public class Main {
         for (Produto p : list) {
             System.out.println(p);
         }
+
+
+
+        List<Integer> lista = Arrays.asList(1,2,3,4,5,6,7,8);
+
+
+        for (Integer integer : lista) {
+            System.out.println(integer);
+        }
+
+        lista.stream().forEach(e -> System.out.println(e));
+
+
+        lista.stream()
+                .filter(e -> e % 2 == 0)
+                .forEach(e -> System.out.println(e));
     }
 }
 
